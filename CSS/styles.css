@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    color: #27213C;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+button{
+    color:white;
+    position: relative;
+}
+#top-buttons{
+    justify-content: space-around;
+}
+form {
+    flex-flow: column wrap;
+    flex: 1 1 100%;
+}
+
+header {
+    background-color: #b1e5f2;
+    flex: 0 0 100%;
+    text-align: center;
+}
+aside {
+    background-color: #CECECE;
+    flex: 0 0 20%
+}
+main {
+    background-color: #A6A6A8;
+    flex: 1 0 0.85em;
+}
+footer {
+    background-color: #E8E9F3;
+    text-align: center;
+    flex: 0 0 100%;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    justify-content: center
+}
