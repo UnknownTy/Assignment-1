@@ -1,40 +1,54 @@
 body {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     background-color: white;
     color: #27213C;
-    justify-content: space-evenly;
-    gap: 20px;
+    grid-template-areas: 
+    "header header header"
+    "navbar content content"
+    "footer footer footer";
+    gap: 1%;
 }
 button{
     color:white;
     position: relative;
+    grid-area: "butttons";
 }
 #top-buttons{
-    justify-content: space-around;
+    grid-area: top-buttons;
 }
+#bottom-buttons{
+    grid-area: bot-buttons;
+}
+
 form {
-    flex-flow: column wrap;
-    flex: 1 1 100%;
+    
 }
 
 header {
     background-color: #b1e5f2;
-    flex: 0 0 100%;
     text-align: center;
+    grid-area: header;
 }
 aside {
     background-color: #CECECE;
-    flex: 0 0 20%
+    grid-area: navbar;
 }
 main {
     background-color: #A6A6A8;
-    flex: 1 0 0.85em;
+    grid-area: content;
+    grid-template-areas: 
+    "top-buttons"
+    "input"
+    "bot-buttons";
 }
+#note_input{
+    grid-area: input;
+}
+
 footer {
     background-color: #E8E9F3;
     text-align: center;
-    flex: 0 0 100%;
+    grid-area: footer;
 }
 footer ul{
     list-style: none;
