@@ -17,26 +17,29 @@ body {
 }
 button{
     color:white;
-    position: relative;
-    grid-area: "butttons";
     border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
     border-width: 0px;
+    margin: 10%;
+    place-self: center;
 }
-#top-buttons{
-    grid-area: top-buttons;
-}
-#bottom-buttons{
-    grid-area: bot-buttons;
-}
+
 #new-note, #save{
     background-color: #5d997c;
 }
+#new-note{
+    grid-area: button1;
+}
 #change-theme{
     background-color: #696969;
+    grid-area: button2;
+}
+#save{
+    grid-area: button3;
 }
 #cancel{
     background-color: #d43b15;
+    grid-area: button4;
 }
 
 header {
@@ -52,20 +55,23 @@ aside {
 main {
     background-color: #A6A6A8;
     grid-area: content;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0r 1fr 0fr;
+    display: grid;
+    grid-template-columns: repeat(5, 0.2fr);
+    grid-template-rows: 0fr 1fr 0fr;
     grid-template-areas: 
-    "button1 button 2"
-    "input ."
-    "button 3 button 4";
+    "button1 . . . button2"
+    "input input input input input"
+    " . button3 . button4 .";
 }
 
 #note_input{
     grid-area: input;
+    place-self: center;
     width: 85%;
     height: 85%;
     border-radius: 12px;
     border-width: 0px;
+    resize: none;
 }
 
 footer {
