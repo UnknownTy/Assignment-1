@@ -1,17 +1,27 @@
+html{
+    height: 100%;
+}
 body {
     display: grid;
     background-color: white;
     color: #27213C;
+    min-height: 100%;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 0fr 1fr 0fr;
     grid-template-areas: 
     "header header header"
     "navbar content content"
     "footer footer footer";
-    gap: 1%;
+
+    grid-gap: 5px;
 }
 button{
     color:white;
     position: relative;
     grid-area: "butttons";
+    border-radius: 8px;
+    padding: 5px;
+    border-width: 0px;
 }
 #top-buttons{
     grid-area: top-buttons;
@@ -19,9 +29,14 @@ button{
 #bottom-buttons{
     grid-area: bot-buttons;
 }
-
-form {
-    
+#new-note, #save{
+    background-color: #5d997c;
+}
+#change-theme{
+    background-color: #696969;
+}
+#cancel{
+    background-color: #d43b15;
 }
 
 header {
@@ -29,6 +44,7 @@ header {
     text-align: center;
     grid-area: header;
 }
+
 aside {
     background-color: #CECECE;
     grid-area: navbar;
@@ -36,13 +52,20 @@ aside {
 main {
     background-color: #A6A6A8;
     grid-area: content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0r 1fr 0fr;
     grid-template-areas: 
-    "top-buttons"
-    "input"
-    "bot-buttons";
+    "button1 button 2"
+    "input ."
+    "button 3 button 4";
 }
+
 #note_input{
     grid-area: input;
+    width: 85%;
+    height: 85%;
+    border-radius: 12px;
+    border-width: 0px;
 }
 
 footer {
